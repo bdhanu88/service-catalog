@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-md-10 col-sm-12 pagination-info">
+		<span class="pagination-length-info">Show</span>
+		<form>
+			<md-select [(ngModel)]="selectedValue" (ngModelChange)="filterValue(selectedValue)" name="length"
+				class="ag-grid length"> <md-option
+				*ngFor="let selectOption of selectOptions" [value]="selectOption.value">
+			{{selectOption.viewValue}} </md-option> </md-select>
+		</form>
+		<span class="pagination-length-info">entries</span>
+	</div>
+	
+	<div class="col-md-2 col-sm-12">
+		<md-input-container> <input mdInput (keyup)="onSearchRecords()" 
+    [(ngModel)]="searchRecord"
+			placeholder="Search records" type="text"> </md-input-container>
+	</div>
+</div>

@@ -1,0 +1,169 @@
+<div *ngFor="let job of jobList">
+
+  <div *ngIf="isToolTipRequired=='true'">
+    <div class="locationDetailBlock" [tooltip]="myTooltip">
+      <div *ngIf="job.status=='1'">
+        <div *ngIf="job.time >10">
+          <div class="col-md-4 statusBlock available availablewarn">
+            <span style="font-size: 13px">{{job.time}} m</span>
+          </div>
+        </div>
+        <div *ngIf="job.time <=10">
+          <div class="col-md-4 statusBlock available ">
+            <span style="font-size: 13px">{{job.time}} m</span>
+          </div>
+        </div>
+
+      </div>
+      <div *ngIf="job.status=='2'">
+        <div class="col-md-4 statusBlock cleaning">
+          <span style="font-size: 13px">{{job.time}} m</span>
+        </div>
+      </div>
+      <div *ngIf="job.status=='3'">
+        <div class="col-md-4 statusBlock jobAssigned ">
+          <span style="font-size: 13px">{{job.time}} m</span>
+        </div>
+      </div>
+      <div *ngIf="job.status=='4'">
+        <div class="col-md-4 statusBlock onBreak">
+          <span style="font-size: 13px">{{job.time}} m</span>
+        </div>
+      </div>
+
+      <div class="col-md-8 locationRightBlock">
+        <div>
+
+          <span class="locationName"> {{job.name}} </span>
+        </div>
+        <div style="margin-top:-1vh">
+
+          <span class="locationArea"> {{job.currArea.area}} </span>
+        </div>
+
+      </div>
+      <tooltip-content #myTooltip [animation]="true" tooltipPlacement="right" placement="right">
+        <div class="text-left locationToolTipDiv">
+
+
+          <div class="col-md-12 locationToolTipHeader">
+            <div class="col-md-8" style="float: left;margin-left: -20px"><b>{{job.name}}</b></div>
+
+            <div class="col-md-4 locationToolTipJobId">
+              <b>{{job.jobId}}</b>
+            </div>
+          </div>
+          <div *ngIf="job.isJobAssigned=='true'">
+            <div class="col-md-12">
+              <span class="destDot"></span>{{job.destArea.area}} , {{job.destArea.location}}
+            </div>
+          </div>
+          <div *ngIf="job.isJobAssigned == 'true'">
+            <div class="col-md-12"><span
+              style="border-left-color: #a8a8a8;border-left-style: solid;height: 1em"></span>
+            </div>
+          </div>
+          <div class="col-md-12">
+
+            <span class="currDot"></span>{{job.currArea.area}} , {{job.currArea.location}}
+
+          </div>
+          <div *ngIf="job.isJobAssigned=='true'">
+            <div class="col-md-12" style=";margin-top: 4px">
+              <div *ngIf="job.status=='1'">
+                <div class="col-md-7 locationJobStatusDiv available"><b>AVAILABLE</b></div>
+              </div>
+              <div *ngIf="job.status=='2'">
+                <div class="col-md-7 locationJobStatusDiv cleaning"><b>CLEANING</b></div>
+              </div>
+              <div *ngIf="job.status=='3'">
+                <div class="col-md-7 locationJobStatusDiv jobAssigned"><b>IN PROGRESS</b></div>
+              </div>
+              <div *ngIf="job.status=='4'">
+                <div class="col-md-7 locationJobStatusDiv onBreak"><b>ON BREAK</b></div>
+              </div>
+
+              <div class="col-md-5">
+
+                <div class="col-md-6"></div>
+                <div class="col-md-6 locationTimer"><b>
+                  00:{{job.time}}:00
+                </b></div>
+              </div>
+
+            </div>
+          </div>
+          <div *ngIf="job.isJobAssigned=='false'">
+            <div class="col-md-12" style=";margin-top: 24px">
+              <div *ngIf="job.status=='1'">
+                <div class="col-md-7 locationJobStatusDiv available"><b>AVAILABLE</b></div>
+              </div>
+              <div *ngIf="job.status=='2'">
+                <div class="col-md-7 locationJobStatusDiv cleaning"><b>CLEANING</b></div>
+              </div>
+              <div *ngIf="job.status=='3'">
+                <div class="col-md-7 locationJobStatusDiv jobAssigned"><b>IN PROGRESS</b></div>
+              </div>
+              <div *ngIf="job.status=='4'">
+                <div class="col-md-7 locationJobStatusDiv onBreak"><b>ON BREAK</b></div>
+              </div>
+
+              <div class="col-md-5">
+
+                <div class="col-md-6"></div>
+                <div class="col-md-6 locationTimer"><b>
+                   00:{{job.time}}:00
+                </b></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </tooltip-content>
+
+
+    </div>
+  </div>
+  <div *ngIf="isToolTipRequired=='false'">
+    <div class="locationDetailBlock" >
+      <div *ngIf="job.status=='1'">
+        <div class="col-md-4 statusBlock available">
+          <span style="font-size: 13px">{{job.time}} M</span>
+        </div>
+      </div>
+      <div *ngIf="job.status=='2'">
+        <div class="col-md-4 statusBlock cleaning">
+          <span style="font-size: 13px">{{job.time}} M</span>
+        </div>
+      </div>
+      <div *ngIf="job.status=='3'">
+        <div class="col-md-4 statusBlock jobAssigned ">
+          <span style="font-size: 13px">{{job.time}} M</span>
+        </div>
+      </div>
+      <div *ngIf="job.status=='4'">
+        <div class="col-md-4 statusBlock onBreak">
+          <span style="font-size: 13px">{{job.time}} M</span>
+        </div>
+      </div>
+
+      <div class="col-md-8 locationRightBlock" >
+        <div>
+
+          <span class="locationName"> {{job.name}} </span>
+        </div>
+        <div style="margin-top:-1vh">
+
+          <span class="locationArea"> {{job.currArea.area}} </span>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="main-content employee-profile">
+  <form [formGroup]="emergencyJobForm">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header" data-background-color="red">
+            <h4 class="title">EMERGENCY ALERTS</h4>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-8" style="border-right: solid;border-right-color: #80808038;height: 75vh;width: 57%">
+                  <div class="col-md-12 formatted-form-emergency">
+                    <div class="col-md-4">
+                      <input type="hidden" formControlName="id" name="id">
+
+                      <md-select placeholder="Type" formControlName="type" style="color: red" name="type" mdInput>
+                        <md-option [value]="3" style="color: red">Code 3</md-option>
+                        <md-option [value]="4" style="color: red">Code 4</md-option>
+                        <md-option [value]="5" style="color: red">Code 5</md-option>
+
+                      </md-select>
+
+                    </div>
+                    <div class="col-md-4">
+                      <md-input-container><input formControlName="location" mdInput
+                                                 required type="text" focused>
+                        <md-placeholder>Required Location</md-placeholder>
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+
+                      <md-input-container><input formControlName="numOfStaff" mdInput
+                                                 required type="number" value="1" focused>
+                        <md-placeholder>Total Staff Needed</md-placeholder>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form-emergency">
+                    <div class="col-md-4 ">
+                      Send Alert(s) to
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form-emergency">
+                    <div class="col-md-10">
+                      <div class="col-md-3">
+                        <md-checkbox formControlName="alertType" class="md-primary" value="one"> All(Default)
+                        </md-checkbox>
+                      </div>
+                      <div class="col-md-3">
+                        <md-checkbox formControlName="alertType" value="two"> Available</md-checkbox>
+                      </div>
+                      <div class="col-md-3">
+                        <md-checkbox formControlName="alertType" value="three"> On Break</md-checkbox>
+                      </div>
+                      <div class="col-md-3">
+                        <md-checkbox formControlName="alertType" value="three"> Busy</md-checkbox>
+                      </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                  </div>
+
+                  <div class="col-md-12 formatted-form-emergency">
+                    <md-input-container><input formControlName="comment" mdInput
+                                               required type="text" focused>
+                      <md-placeholder>Comment(s)</md-placeholder>
+                    </md-input-container>
+                  </div>
+                  <div class="col-md-12 formatted-form-emergency">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-9">
+                        <div style="margin-left:10px; margin-bottom:10px">
+                          <a (click)="changeBtn()" class="md-warn" href="#/emergency" name="btn" data-type="send" id="submitButton" style="margin-right: 10px;font-size: 14px;width: 12vw"
+                             class="btn btn-danger pull-right"><b>Send Alert</b></a>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4" style="width: 43%">
+                  <div class="col-md-12">
+                    <div id="responseDivHeader" class="col-md-6" style="margin-top: 5vh;font-size: 18px;color: red;font-weight: 400;">Staff Responses
+                    </div>
+                    <div class="col-md-6"></div>
+                  </div>
+                  <div id="noGrid"  class="col-md-12" style="background-color: #a9a9a94a;padding: 10px;margin: 2vh;height: 50vh;" layout-align='center center' layout='column'>
+                    <span style="position: relative;top: 46%;transform: perspective(0px) translateY(-50%);left: 10%;color: #8080808c"><b>Send The Alert To See Staff Responses</b></span>
+                  </div>
+                  <div  id="customGrid" class="col-md-12" style="background-color:white;padding: 10px;margin: 2vh;height: 50vh;" layout-align='center center' layout='column'>
+                    <custom-grid-comp isToolTipRequired="false" [jobList]="list"></custom-grid-comp>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="myDialog">
+    <h2 md-dialog-title>{{title}}</h2>
+    <div md-dialog-content>
+      <div>
+        <form [formGroup]="empTypeForm"  novalidate>
+          <!-- we will place our fields here -->
+          <div  class="form-group">
+            <input  type="hidden" formControlName="id" name="id" class="form-control" >
+            <label>Name</label>
+            <!--bind name to ngModel, it's required with minimum 5 characters-->
+            <input  type="text" formControlName="name" name="name" class="form-control" >
+            <!--show error only when field is not valid & it's dirty or form submited-->
+            <small *ngIf="empTypeForm.controls.name.errors && (empTypeForm.controls.name.dirty || empTypeForm.controls.name.touched)">
+              <small [hidden]="!empTypeForm.controls.name.errors.required" class="text-danger">
+                Employee Type Name is required
+              </small>
+
+              <small [hidden]="!empTypeForm.controls.name.errors.exist" class="text-danger">
+                Duplicate Employee Type
+              </small>
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label>Abbreviation</label>
+            <input type="text" formControlName="abbreviation" name="abbreviation" class="form-control">
+          </div>
+
+
+          <button md-button  type="submit" (click)="dialogRef.close(empTypeForm.value)" >{{actionButton}}</button>
+          <button md-button type="button" (click)="dialogRef.close(null)">Cancel</button>
+        </form>
+      </div>
+
+    </div>
+    <div md-dialog-actions>
+
+    </div>
+  </div>
+</div>
+

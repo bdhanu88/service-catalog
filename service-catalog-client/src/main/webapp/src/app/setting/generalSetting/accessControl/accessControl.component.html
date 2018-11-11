@@ -1,0 +1,40 @@
+<div class="main-content access-control">
+
+	<div class="row">
+		<div class="col-md-5">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">Role</h4>
+				</div>
+				<div class="card-content">
+					<tree-root #tree [focused]="true" [nodes]="roleNodes"
+						(moveNode)="roleMoveNode($event)" [options]="options"
+						(activate)="treeclickEvent($event)"> </tree-root>
+				</div>
+				<div class="card-footer" *ngIf="customValidationService.isPermissionAvailable('ROLE_EDIT')">
+
+					<button *ngIf="showAddRoleButton" (click)="addRole()"
+						class=" btn btn-primary pull-right">Add Role</button>
+
+					<button *ngIf="showEditButton" (click)="editRole()"
+						class=" btn btn-primary pull-right">Edit Role</button>
+
+					<button *ngIf="showEditButton" (click)="deleteRole()"
+						class=" btn btn-primary pull-right">Remove Role</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-7">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">Permission</h4>
+				</div>
+				<div class=" ">
+					<ngx-treeview [config]="config" [items]="items"
+						(selectedChange)="selectedChange($event)"> </ngx-treeview>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

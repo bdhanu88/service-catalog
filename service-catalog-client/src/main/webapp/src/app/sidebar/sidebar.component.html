@@ -1,0 +1,41 @@
+<div class="logo">
+	<a href="http://www.caresystemsinc.com" class="simple-text"> <img
+		src="assets/img/caresytem-logo-small.png" />
+	</a>
+</div>
+<div class="user">
+	<div class="photo">
+		<img src="assets/img/faces/marc.jpg" style="height: 80px;">
+	</div>
+	<div class="info">
+		<a href="#"> Porter Manager </a>
+	</div>
+</div>
+<div class="sidebar-wrapper">
+	<div class="nav-container">
+		<ul class="nav">
+			<li *ngFor="let menuItem of menuItems" routerLinkActive="active"
+				class="{{menuItem.class}}"><a
+				*ngIf="menuItem.children.length == 0" [routerLink]="[menuItem.path]">
+					<i class="material-icons ">{{menuItem.icon}}</i>
+					<p >{{ menuItem.title | translate }}</p>
+			</a> <a *ngIf="menuItem.children.length > 0" data-toggle="collapse"
+				href="#{{menuItem.path}}" class="nestedChildren" aria-expanded="false"> <i
+					class="material-icons ">{{menuItem.icon}}</i>
+					<p>
+						{{ menuItem.title | translate }} <b class="caret"></b>
+					</p>
+			</a>
+
+				<div class="collapse" id="{{menuItem.path}}" aria-expanded="false">
+					<ul class="nav">
+						<li *ngFor="let children of menuItem.children" routerLinkActive="active" ><a
+							[routerLink]="[children.path]">
+              <span class="sidebar-normal">{{ children.title | translate
+              }}</span></a></li>
+					</ul>
+				</div></li>
+
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="main-content">
+ <div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">{{treeTitle}}</h4>
+				</div>
+				<div class="card-content">
+					<tree-root #tree [focused]="true" [nodes]="nodes"
+						(activate)="treeclickEvent($event)"> </tree-root>
+				</div>
+				<div class="card-footer">
+					<button *ngIf="isAddShow" (click)="addUnit()"
+						class="btn btn-primary pull-right">Add {{addAction}}</button>
+
+					<button *ngIf="isEditShow"
+						(click)="editUnit()" class="btn btn-primary pull-right">Edit {{editAction}}
+						</button>
+
+					<button *ngIf="isRemoveShow"
+						(click)="removeUnit()" class="btn btn-primary pull-right">Remove
+						{{removeAction}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

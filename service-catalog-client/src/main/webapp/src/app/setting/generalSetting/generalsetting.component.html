@@ -1,0 +1,212 @@
+<div class="main-content general-setting">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">Company Profile</h4>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="assets/img/faces/marc.jpg" alt="Rounded Image"
+                   class="img-rounded img-responsive">
+              <div class="dis-button-center-div">
+                <button md-button>Change Logo</button>
+              </div>
+
+            </div>
+            <div class="col-md-9">
+              <form [formGroup]="companyForm">
+                <div class="form-group">
+
+                  <div class="row">
+                    <div class="col-md-8">
+                      <md-input-container>
+                        <input mdInput formControlName="name" name="name" required type="text" focused>
+                        <md-placeholder>Company</md-placeholder>
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+                      <md-select formControlName="timeZone" class="form-control" placeholder="Time Zone">
+                        <md-option *ngFor="let zone of timeZones" [value]="zone.id">{{"GMT "+zone.offset+"
+                          "+zone.country }}
+                        </md-option>
+                      </md-select>
+
+                      <input type="hidden" name="id" formControlName="id" class="form-control">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+
+                  <div class="row">
+                    <div class="col-md-8">
+                      <md-input-container>
+                        <input mdInput name="address" formControlName="address" placeholder="Address" required
+                               type="text">
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+                      <md-select name="timeFormat" formControlName="timeFormat" placeholder="Time Format">
+                        <md-option [value]="12">12</md-option>
+                        <md-option [value]="24">24</md-option>
+                      </md-select>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+
+                    <div class="col-md-8">
+                      <md-input-container>
+                        <input mdInput name="phoneNo" formControlName="phoneNo" placeholder="Phone No" required
+                               type="text">
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+                      <md-select name="weekStartDay" formControlName="weekStartDay" placeholder="Week Start Day">
+                        <md-option *ngFor="let day of weekDays" [value]="day">{{day|translate}}</md-option>
+                      </md-select>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <md-input-container>
+                        <input mdInput name="licenseNo" formControlName="licenseNo" placeholder="License Number"
+                               disabled type="text">
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+                      <md-input-container><input
+                        mdInput [mdDatepicker]="validdate" name="validDate" formControlName="validDate"
+                        placeholder="Valid Date">
+                        <button mdSuffix [mdDatepickerToggle]="validdate"></button>
+                      </md-input-container>
+                      <md-datepicker #validdate></md-datepicker>
+                    </div>
+                    <div class="col-md-4">
+                      <md-input-container>
+                        <input mdInput name="operationalHours" formControlName="operationalHours"
+                               placeholder="Operational Hours" required type="text">
+                      </md-input-container>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button type="submit" (click)="saveCompany(companyForm.value)" class="btn btn-primary pull-right">
+                    Update
+                    Profile
+                  </button>
+                  <div class="clearfix"></div>
+
+                </div>
+
+
+              </form>
+
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">Employees Attributes</h4>
+        </div>
+        <div class="card-content table-responsive">
+          <table class="table">
+            <tbody *ngFor="let tab of employeeAttributes">
+            <tr>
+              <td>{{tab.title}}</td>
+              <td class="td-actions pull-right">
+                <a href="#/{{tab.path}}">
+                <button type="button" rel="tooltip" title=""
+                        class="btn btn-primary btn-simple btn-xs"
+                        data-original-title="Edit Task">
+                  <i class="material-icons">dvr</i>
+                </button>
+                </a>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">Job Queue Management</h4>
+        </div>
+        <div class="card-content table-responsive">
+          <table class="table">
+            <tbody *ngFor="let queueTab of jobQueueAttributes">
+            <tr>
+              <td>{{queueTab.title}}</td>
+              <td class="td-actions pull-right">
+                <a href="#/{{queueTab.path}}">
+                <button type="button" rel="tooltip" title=""
+                        class="btn btn-primary btn-simple btn-xs"
+                        data-original-title="Edit Task">
+                  <i class="material-icons">dvr</i>
+                </button>
+                </a>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">System Configuration</h4>
+        </div>
+        <div class="card-content table-responsive">
+          <table class="table">
+            <tbody *ngFor="let sysTab of systemConfiguration">
+            <tr>
+              <td>{{sysTab.title}}</td>
+              <td class="td-actions pull-right">
+                <a href="#/{{sysTab.path}}">
+                  <button type="button" rel="tooltip" title=""
+                          class="btn btn-primary btn-simple btn-xs"
+                          data-original-title="Edit Task">
+                    <i class="material-icons">dvr</i>
+                  </button>
+                </a>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

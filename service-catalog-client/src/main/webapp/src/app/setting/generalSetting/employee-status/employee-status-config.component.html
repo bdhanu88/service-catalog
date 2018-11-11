@@ -1,0 +1,20 @@
+<div class="main-content employee-status-config">
+    <div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">Employee Status</h4>
+				</div>
+				<div class="card-content">
+					<div style="margin-left:10px; margin-bottom:10px" *ngIf="customValidation.isPermissionAvailable('EMPLOYEE_STATUS_EDIT')">
+						<button md-button (click)="addNewEmployeeStatus()" style="margin-right: 10px"
+									class="btn btn-info pull-right">Add Employee Status</button>
+					</div>
+					<ag-grid-table-cmp ></ag-grid-table-cmp>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

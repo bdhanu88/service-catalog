@@ -1,0 +1,569 @@
+<div class="main-content">
+  <div class="card" style="padding: 2vh">
+    <div class="card-content">
+      <div class="col-md-12">
+        <!--<a class="md-button"  href="#/location" style="margin-right: 10px"
+           class="btn btn-info pull-left">Back</a>-->
+        <div class="col-md-3">
+          <h5 style="float: left">Staff By location</h5>
+        </div>
+        <div class="col-md-9">
+          <div class="col-md-2">
+            <div class="col-md-3"
+                 style="background-color: orangered;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px">
+              Available
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="col-md-3" style="background-color: orange;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px">
+              Cleaning
+            </div>
+          </div>
+          <div class="col-md-2" style="width: 20%">
+            <div class="col-md-3" style="background-color: green;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px;padding: 3px">
+              Job Assigned
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="col-md-3"
+                 style="background-color: deepskyblue;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px;padding: 3px">
+              On Break
+            </div>
+          </div>
+          <div class="col-md-3">
+            <!--<md-select name="destArea" class="title" [value]="1" >
+              <md-option [value]="1" >Select All</md-option>
+            </md-select>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12"
+           style="background-image: url('./assets/img/LocationsSample.png');background-repeat: no-repeat; background-size: 150vh; height: 115vh;">
+        <!--<img src="assets/img/Locations%20-%20Sample.png">-->
+        <!-- <div style="margin-top: 42vh;margin-left: 50vh">
+         <span class="statusBlock available" style="height: 1vh;width: 2vh;color: orangered" >ab</span>
+         </div>
+         <div style="margin-top: 35vh;margin-left: 50vh">
+         <span class="statusBlock available" style="height: 1vh;width: 2vh;color: orangered" >ab</span>
+         </div>-->
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1 available mapIndicatorBlock" [tooltip]="myTooltip2">
+            <div>
+              <tooltip-content #myTooltip2 [animation]="true" tooltipPlacement="left" >
+                <div class="text-left locationToolTipDiv">
+                  <div class="col-md-12 locationToolTipHeader">
+                    <div class="col-md-8" style="float: left;margin-left: -20px"><b>James</b></div>
+
+                    <div class="col-md-4 locationToolTipJobId">
+                      <b>123-45678E</b>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12" >
+                    <span  class="currDot"></span>Utility , Hospital Building
+                  </div>
+                  <div class="col-md-12" style=";margin-top: 24px">
+                    <div class="col-md-7 locationJobStatusDiv available"><b>AVAILABLE</b></div>
+                    <div class="col-md-5">
+                      <div class="col-md-6"></div>
+                      <div class="col-md-6 locationTimer"><b>
+                        00:12:00
+                      </b></div>
+                    </div>
+                  </div>
+                </div>
+              </tooltip-content>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1 jobAssigned mapIndicatorBlock" [tooltip]="myTooltip4">
+            <div>
+              <tooltip-content #myTooltip4 [animation]="true" tooltipPlacement="left" >
+                <div class="text-left locationToolTipDiv">
+                  <div class="col-md-12 locationToolTipHeader">
+                    <div class="col-md-8" style="float: left;margin-left: -20px"><b>Bert</b></div>
+
+                    <div class="col-md-4 locationToolTipJobId">
+                      <b>123-45678E</b>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <span class="destDot"></span>Ward 12 , Hospital Building
+                  </div>
+                  <div class="col-md-12"><span
+                    style="border-left-color: #a8a8a8;border-left-style: solid;height: 1em"></span>
+                  </div>
+                  <div class="col-md-12">
+                    <span class="currDot"></span>Utility , Hospital Building
+                  </div>
+                  <div class="col-md-12" style=";margin-top: 4px">
+                    <div class="col-md-7 locationJobStatusDiv jobAssigned"><b>IN PROGRESS</b></div>
+                    <div class="col-md-5">
+                      <div class="col-md-6"></div>
+                      <div class="col-md-6 locationTimer"><b>
+                        00:12:00
+                      </b></div>
+                    </div>
+                  </div>
+                </div>
+              </tooltip-content>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1 "></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1 "></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1 available mapIndicatorBlock" [tooltip]="myTooltip3">
+            <div>
+              <tooltip-content #myTooltip3 [animation]="true" tooltipPlacement="left" >
+                <div class="text-left locationToolTipDiv">
+                  <div class="col-md-12 locationToolTipHeader">
+                    <div class="col-md-8" style="float: left;margin-left: -20px"><b>Jonathan</b></div>
+
+                    <div class="col-md-4 locationToolTipJobId">
+                      <b>123-45678E</b>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12" >
+                    <span  class="currDot"></span>Emergency Room , Hospital Building
+                  </div>
+                  <div class="col-md-12" style=";margin-top: 24px">
+                    <div class="col-md-7 locationJobStatusDiv available"><b>AVAILABLE</b></div>
+                    <div class="col-md-5">
+                      <div class="col-md-6"></div>
+                      <div class="col-md-6 locationTimer"><b>
+                        00:12:00
+                      </b></div>
+                    </div>
+                  </div>
+                </div>
+              </tooltip-content>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1 jobAssigned mapIndicatorBlock" [tooltip]="myTooltip1">
+            <div>
+              <tooltip-content #myTooltip1 [animation]="true" tooltipPlacement="left" >
+                <div class="text-left locationToolTipDiv">
+                  <div class="col-md-12 locationToolTipHeader">
+                    <div class="col-md-8" style="float: left;margin-left: -20px"><b>John</b></div>
+
+                    <div class="col-md-4 locationToolTipJobId">
+                      <b>123-45678E</b>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <span class="destDot"></span>Dispensary , Hospital Building
+                  </div>
+                  <div class="col-md-12"><span
+                    style="border-left-color: #a8a8a8;border-left-style: solid;height: 1em"></span>
+                  </div>
+                  <div class="col-md-12">
+                    <span class="currDot"></span>Admin , Hospital Building
+                  </div>
+                  <div class="col-md-12" style=";margin-top: 4px">
+                    <div class="col-md-7 locationJobStatusDiv jobAssigned"><b>IN PROGRESS</b></div>
+                    <div class="col-md-5">
+                      <div class="col-md-6"></div>
+                      <div class="col-md-6 locationTimer"><b>
+                        00:12:00
+                      </b></div>
+                    </div>
+                  </div>
+                </div>
+              </tooltip-content>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1 "></div>
+          <div class="col-md-1  cleaning mapIndicatorBlock" [tooltip]="myTooltip">
+            <div>
+              <tooltip-content #myTooltip [animation]="true" tooltipPlacement="bottom" >
+                <div class="text-left locationToolTipDiv">
+                  <div class="col-md-12 locationToolTipHeader">
+                    <div class="col-md-8" style="float: left;margin-left: -20px"><b>Elliot</b></div>
+
+                    <div class="col-md-4 locationToolTipJobId">
+                      <b>123-45678E</b>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <span class="destDot"></span>Cafetaria , Hospital Building
+                  </div>
+                  <div class="col-md-12"><span
+                    style="border-left-color: #a8a8a8;border-left-style: solid;height: 1em"></span>
+                  </div>
+                  <div class="col-md-12">
+                    <span class="currDot"></span>Pediatric Waiting , Hospital Building
+                  </div>
+                  <div class="col-md-12" style=";margin-top: 4px">
+                    <div class="col-md-7 locationJobStatusDiv cleaning"><b>CLEANING</b></div>
+                    <div class="col-md-5">
+                      <div class="col-md-6"></div>
+                      <div class="col-md-6 locationTimer"><b>
+                        00:12:00
+                      </b></div>
+                    </div>
+                  </div>
+                </div>
+              </tooltip-content>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12" style="height: 4vh">
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>

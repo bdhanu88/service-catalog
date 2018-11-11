@@ -1,0 +1,56 @@
+
+<div class="skillDialog">
+        <h2 md-dialog-title>{{title}}</h2>
+        <div md-dialog-content>
+            <div>
+                <form [formGroup]="skillForm"  novalidate (ngSubmit)="skillForm.valid" novalidate>
+                    <!-- we will place our fields here -->
+                    <div  class="form-group">
+                        <input  type="hidden" formControlName="id" name="id" class="form-control" >
+                        <label>Name</label>
+                        <!--bind name to ngModel, it's required with minimum 5 characters-->
+                        <input  type="text" formControlName="name" name="name" class="form-control" >
+                        <!--show error only when field is not valid & it's dirty or form submited-->
+
+                        <small *ngIf="skillForm.controls.name.errors && (skillForm.controls.name.dirty || skillForm.controls.name.touched)">
+                             <small [hidden]="!skillForm.controls.name.errors.required" class="text-danger">
+                                 Name is required
+                             </small>
+
+                              <small [hidden]="!skillForm.controls.name.errors.exist" class="text-danger">
+                                  Duplicate {{type}} name
+                             </small>
+                        </small>
+                    </div>
+
+                    <!--adrress group-->
+                    <div class="form-group">
+                        <!--street-->
+                        <div>
+                            <label>Abbreviation</label>
+                            <input type="text" formControlName="abbreviation" name="abbreviation" class="form-control" >
+                             <small *ngIf="skillForm.controls.abbreviation.errors">
+                                    <small [hidden]="!skillForm.controls.abbreviation.errors.exist" class="text-danger">
+                                       Duplicate abbreviation
+                                    </small>
+                             </small>
+                        </div>
+                    </div>
+
+                    <div *ngIf="!isSkillGroup"  class="form-group">
+                      <input  hidden formControlName="companyId" name="companyId" class="form-control" >
+                        <label>Skill Group</label>
+                        <md-select  [(ngModel)]="skillGroupId" formControlName="skillGroup" class="form-control">
+                            <md-option *ngFor="let skillGroupTmp of skillGroups" [value]="skillGroupTmp.id">{{ skillGroupTmp.name }}</md-option>
+                        </md-select>
+                    </div>
+                    <button md-button [disabled]="!skillForm.valid" type="submit" (click)="dialogRef.close(skillForm.value)">{{actionButton}}</button>
+                    <button md-button type="button" (click)="dialogRef.close(null)">Cancel</button>
+                </form>
+            </div>
+
+        </div>
+        <div md-dialog-actions>
+
+        </div>
+</div>

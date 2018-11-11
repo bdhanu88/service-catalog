@@ -1,0 +1,17 @@
+<div class="wrapper" mdl>
+  <simple-notifications ></simple-notifications>
+	<div  *ngIf="isMaps('login')" class="sidebar" data-active-color='purple' data-image="">
+		<sidebar-cmp></sidebar-cmp>
+		<div class="sidebar-background"></div>
+	</div>
+	<div class="main-panel">
+	<div *ngIf="isMaps('login')">
+		<navbar-cmp></navbar-cmp>
+	</div>
+		<dashboard-cmp ></dashboard-cmp>
+		<setting-cmp></setting-cmp>
+		<div  *ngIf="isMaps('login') && isMaps('generalsetting')">
+			<footer-cmp></footer-cmp>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+<div class="main-content">
+	<div class="row">
+    <div *ngIf="isSummaryAvailable=='true'">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-content" style="height: auto">
+            <div class="col-md-4 summary-right-border summary-main-block" style="margin-bottom: 1vh;">
+              <div class="col-md-12 " style="margin-left: -3vw; ">
+                <div class="col-md-9 summary-main-text">
+                  <span >Total Employees</span><br>
+                  <span style="font-size: 24px">ACTIVE</span>
+                </div>
+                <div class="col-md-3 summary-main-count" style="margin-top: 1.5vh;">
+                  <span>52</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="col-md-3 summary-right-border" >
+                <span class="summary-detail-text-block">Available</span><br>
+                <span class="summary-count-block">02</span>
+              </div>
+              <div class="col-md-3 summary-right-border" >
+                <span class="summary-detail-text-block">Job Assigned</span><br>
+                <span class="summary-count-block">35</span>
+              </div>
+              <div class="col-md-3 summary-right-border" >
+                <span class="summary-detail-text-block">Cleaning</span><br>
+                <span class="summary-count-block">05</span>
+              </div>
+              <div class="col-md-3" >
+                <span class="summary-detail-text-block"> On Break</span><br>
+                <span class="summary-count-block">10</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">Current Employee Status</h4>
+				</div>
+				<div class="card-content">
+					<ag-grid-table-cmp ></ag-grid-table-cmp>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

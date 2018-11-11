@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+/* @import url('../node_modules/material-design-lite/material.min.css'); */
+@import url('../node_modules/@angular/material/prebuilt-themes/indigo-pink.css');
+@import url('../node_modules/ag-grid/dist/styles/ag-grid.css');
+@import url('../node_modules/ag-grid/dist/styles/theme-material.css');
+@import url('./assets/css/material-dashboard.css');
+@import url('./assets/css/demo.css');
+@import url('./assets/css/dispatcher.css');
+@import url('./assets/css/material-tree.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons');
+@import url('../node_modules/@angular/material/prebuilt-themes/indigo-pink.css');

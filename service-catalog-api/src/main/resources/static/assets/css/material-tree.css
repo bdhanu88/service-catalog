@@ -1,0 +1,256 @@
+
+.tree {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	border-left: none
+}
+
+.tree .tree-children {
+	padding: 0;
+	margin: 0 0 0 30px;
+	list-style-type: none
+}
+
+.tree .node-wrapper {
+	position: relative;
+	padding: 0;
+	margin: 0
+}
+
+.tree .toggle-children{
+	background-image : none;
+	height: 0px;
+    width: 12px;
+    display: inline-block;
+    position: relative;
+    top: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.toggle-children-wrapper-expanded .toggle-children {
+    transform: rotate(90deg);
+    left: 12px;
+    top: 16px;
+}
+
+.toggle-children::before{
+	font-family: 'Material Icons';
+  	content: "play_arrow";
+	font-size: 16px; 
+}
+
+.tree .node-wrapper tree-node-content {
+	margin: 0;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.tree-organization tree-node-content span:before {
+	font-family: 'Material Icons';
+    content: "domain";
+    padding-right: 8px;
+    padding-left: 5px;
+    font-size: 22px;
+    position: relative;
+    top: 4px;
+}
+
+.tree-category tree-node-content span:before {
+	font-family: 'Material Icons';
+  	content: "group";
+	padding-right: 8px;
+    padding-left: 5px;
+	font-size: 22px;
+    position: relative;
+    top: 4px;
+}
+
+.tree-grade tree-node-content span:before {
+	font-family: 'Material Icons';
+  	content: "person";
+	padding-right: 8px;
+    padding-left: 5px;
+	font-size: 22px;
+    position: relative;
+    top: 4px;
+}
+
+.tree-node-folder tree-node-content span:before {
+	font-family: 'Material Icons';
+  	content: "folder";
+	padding-right: 8px;
+    padding-left: 5px;
+    font-size: 22px;
+    position: relative;
+    top: 4px;
+}
+
+.tree li.folder>div>span {
+	padding-right: 8px;
+	padding-left: 15px;
+	cursor: pointer
+}
+
+.tree li.folder.mjs-nestedSortable-expanded>div>span:before
+	{
+	font-family: 'Glyphicons Halflings';
+	content: "\e118"
+}
+
+.tree  li.folder.selected>div {
+	color: #fff;
+	background: #428bca
+}
+
+.tree  li.file>div>a>span, .tree li.file>div>span
+	{
+	padding-right: 8px
+}
+
+.tree  li.file>div>a>span:before, .tree li.file>div>span:before
+	{
+	padding-left: 15px;
+	font-family: 'Glyphicons Halflings';
+	content: "\e022"
+}
+
+.tree li.file.selected>div {
+	color: #fff;
+	background: #428bca
+}
+
+.tree  li.mjs-nestedSortable-collapsed>ol {
+	display: none
+}
+
+.tree.sortable  li.file>div>a>span, .tree.sortable li.file>div>span,
+	.tree.sortable div.tree li.folder>div>span {
+	cursor: move
+}
+
+
+/* Tree View CSS */
+
+.treeview-header{
+	border:none;
+	margin: 0 10px 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #eeeeee;
+	display: table;
+    width: 98%;
+}
+
+.treeview-header[_ngcontent-c1]   .divider[_ngcontent-c1]{
+	height: 0px !important;
+	margin: 0px !important;
+}
+
+.treeview-header div[_ngcontent-c1]{
+	display: inline-table;
+	
+}
+
+.treeview-header div[_ngcontent-c1]:nth-child(2){
+	float: right;
+    right: 25px;
+    position: relative;
+    top: 10px;
+}
+.treeview-header .row .col-12{
+	display: inline-block;
+    position: relative;
+    text-align: left;
+	width : 60%;
+}
+
+.treeview-header .row{
+	width:50%;
+	margin-left: 0%;
+}
+
+.treeview-header input{
+  font-size:14px;
+  padding: .4375em 0;
+  border-top: .84375em solid transparent;
+  display:block;
+  border:none;
+  width: 100%;
+  border-bottom:1px solid rgba(0,0,0,.12);;
+  margin-bottom: 10px;
+}
+.treeview-header input:focus     { outline:none; }
+
+.treeview-header ::-webkit-input-placeholder , .treeview-header ::-moz-placeholder{
+	position: absolute;
+    left: 0;
+    font: inherit;
+	font-size: 14px;
+    pointer-events: none;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transform: perspective(100px);
+    -ms-transform: none;
+    transform-origin: 0 0;
+    transition: transform .4s cubic-bezier(.25,.8,.25,1),color .4s cubic-bezier(.25,.8,.25,1),width .4s cubic-bezier(.25,.8,.25,1);
+    display: none;
+}
+
+.treeview-header input:focus::-webkit-input-placeholder , .treeview-header input:focus::-moz-placeholder {
+	color: #3f51b5;
+	position: absolute;
+	left: 0;
+	font: inherit;
+	pointer-events: none;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transform: perspective(100px);
+	-ms-transform: none;
+	transform-origin: 0 0;
+	transition: transform .4s cubic-bezier(.25, .8, .25, 1), color .4s
+		cubic-bezier(.25, .8, .25, 1), width .4s cubic-bezier(.25, .8, .25, 1);
+	display: none
+
+}
+
+.treeview-header input::before{
+  	font-family: 'Material Icons';
+  	content: "person";
+    
+}
+
+.treeview-header .label-collapse-expand i{
+	font-size: 20px;
+    font-weight: bolder;
+}
+
+.treeview-container {
+	margin : 0px 20px;
+	padding-top: 5px; 
+}
+
+.treeview-container .fa {
+	font-size: 19px !important; 
+}
+
+.treeview-container .form-check-label{
+	margin-left: 10px;
+	font-size: 15px;
+    line-height: 25px;
+}
+
+.treeview-container .form-check-input{
+	margin-right:5px;
+}
+
+.treeview-container[_ngcontent-c1] {
+    overflow-x: inherit !important;
+    overflow-y: inherit !important;
+}

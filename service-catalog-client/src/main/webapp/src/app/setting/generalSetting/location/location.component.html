@@ -1,0 +1,75 @@
+<div class="main-content">
+  <div class="card" style="padding: 2vh">
+    <div class="card-content">
+      <div class="row" style="border-bottom: solid;border-bottom-color:darkgrey;: ">
+        <div class="col-md-4">
+          <h5 style="float: left">Staff By location</h5>
+        </div>
+        <div class="col-md-8">
+          <div class="col-md-3">
+            <div class="col-md-3"
+                 style="background-color: orangered;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px">
+              Available
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="col-md-3" style="background-color: orange;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px">
+              Cleaning
+            </div>
+          </div>
+          <div class="col-md-3" >
+            <div class="col-md-3" style="background-color: green;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px;padding: 3px;margin-left: 1px">
+              Job Assigned
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="col-md-3"
+                 style="background-color: deepskyblue;padding:5px;height: 3vh;border-radius:5px;width: 3vh">
+
+            </div>
+            <div class="col-md-9" style="margin-top: 1px;padding: 3px">
+              On Break
+            </div>
+          </div>
+          <!--<div class="col-md-3">
+            &lt;!&ndash;<md-select name="destArea" class="title" [value]="1" >
+              <md-option [value]="1" >Select All</md-option>
+            </md-select>&ndash;&gt;
+          </div>-->
+        </div>
+      </div>
+
+      <div class="row" style="padding: 1vh;">
+        <div *ngFor="let location of locationList">
+          <div class="col-md-12 locationCard">
+            <div class="col-md-2">
+              <a href="#/locationDetailView" style="color: black">
+                <span>{{location.floor}}</span><br>
+                {{location.building}}
+              </a>
+            </div>
+
+            <div class="col-md-10">
+              <custom-grid-comp isToolTipRequired="true" [jobList]="location.jobs"></custom-grid-comp>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>

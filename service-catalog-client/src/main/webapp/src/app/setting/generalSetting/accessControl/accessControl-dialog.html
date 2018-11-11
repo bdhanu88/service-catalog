@@ -1,0 +1,45 @@
+<div class="main-content">
+    <div class="myDialog">
+        <h2 md-dialog-title>{{title}}</h2>
+        <div md-dialog-content>
+            <div>
+                <form [formGroup]="roleForm"  novalidate>
+                    <!-- we will place our fields here -->
+                    <div  class="form-group">
+                        <input  type="hidden" formControlName="id" name="id" class="form-control" >
+                        <input  type="hidden" formControlName= "oldParent" name="oldParent" class="form-control" >
+                      <input  type="hidden" formControlName= "companyId" name="companyId" class="form-control" >
+                        <label>Name</label>
+                        <!--bind name to ngModel, it's required with minimum 5 characters-->
+                        <input  type="text" formControlName="roleName" name="roleName" class="form-control" >
+                        <!--show error only when field is not valid & it's dirty or form submited-->
+
+                        <small *ngIf="roleForm.controls.roleName.errors && (roleForm.controls.roleName.dirty || roleForm.controls.roleName.touched)">
+                             <small [hidden]="!roleForm.controls.roleName.errors.required" class="text-danger">
+                                 Name is required
+                             </small>
+
+                              <small [hidden]="!roleForm.controls.roleName.errors.roleAvailable" class="text-danger">
+                                  Duplicate role name
+                             </small>
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Parent Role</label>
+                        <md-select  [(ngModel)]="parentRoleId" formControlName="parentRole" class="form-control">
+                            <md-option *ngFor="let role of parentRoles" [value]="role.id">{{ role.roleName }}</md-option>
+                        </md-select>
+                    </div>
+
+                    <button md-button [disabled]="!roleForm.valid" type="submit" (click)="dialogRef.close(roleForm.value)">{{actionButton}}</button>
+                    <button md-button type="button" (click)="dialogRef.close(null)">Cancel</button>
+                </form>
+            </div>
+
+        </div>
+        <div md-dialog-actions>
+
+        </div>
+    </div>
+<div class="main-content">

@@ -1,0 +1,285 @@
+<div class="main-content employee-profile">
+  <form [formGroup]="empProfileForm">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">Employee Profile</h4>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="assets/img/faces/marc.jpg" alt="Rounded Image"
+                   class="img-rounded img-responsive">
+              <div class="dis-button-center-div">
+                <button md-button>Upload Photo</button>
+              </div>
+
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row">
+
+                  <div class="col-md-9">
+                    <input type="hidden" formControlName="id" name="id">
+                    <md-input-container><input formControlName="name" mdInput
+                                               required type="text" focused>
+                      <md-placeholder>Name</md-placeholder>
+                    </md-input-container>
+
+                  </div>
+                  <div class="col-md-3">
+                    <md-input-container><input mdInput
+                                               placeholder="Employee Id" formControlName="employeeId" required
+                                               type="text"></md-input-container>
+                    <small *ngIf="empProfileForm.controls.employeeId.errors && (empProfileForm.controls.employeeId.dirty || empProfileForm.controls.employeeId.touched)">
+                      <small [hidden]="!empProfileForm.controls.employeeId.errors.required" class="text-danger">
+                        Employee Id is required
+                      </small>
+
+                      <small [hidden]="!empProfileForm.controls.employeeId.errors.exist" class="text-danger">
+                        Duplicate Employee Id
+                      </small>
+                    </small>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <md-input-container><input mdInput
+                                               placeholder="Address" formControlName="address" required type="text">
+                    </md-input-container>
+                  </div>
+                  <div class="col-md-3">
+                    <md-input-container><input mdInput formControlName="nationality"
+                                               placeholder="Nationality" required type="text"></md-input-container>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <md-input-container><input mdInput formControlName="email"
+                                               placeholder="Email" required type="email"></md-input-container>
+                  </div>
+                  <div class="col-md-4">
+                    <md-input-container><input mdInput formControlName="phoneNo"
+                                               placeholder="Phone" required type="text"></md-input-container>
+                  </div>
+                  <div class="col-md-4">
+                    <md-input-container><input mdInput formControlName="mobileNo"
+                                               placeholder="Mobile" required type="text"></md-input-container>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+
+                    <md-select placeholder="Gender" name="gender" formControlName="gender">
+                      <md-option *ngFor="let gen of genderLst;let i= index" [value]="gen">{{gen}}</md-option>
+                    </md-select>
+
+                  </div>
+                  <div class="col-md-4">
+
+                    <md-select placeholder="Martial Status" name="martialStatus" formControlName="maritalStatus">
+                      <md-option *ngFor="let status of statusList" [value]="status">{{status}}</md-option>
+                    </md-select>
+
+                  </div>
+                  <div class="col-md-4">
+                    <md-input-container><input formControlName="dob"
+                                               mdInput [mdDatepicker]="picker" placeholder="Date Of Birth">
+                      <button mdSuffix [mdDatepickerToggle]="picker"></button>
+                      <md-datepicker #picker></md-datepicker>
+                    </md-input-container>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+
+                      <md-select mdInput formControlName="employeeType" placeholder="Employeement Type" type="text">
+                        <md-option *ngFor="let empType of empTypes" [value]="empType.id">{{empType.name}}</md-option>
+                      </md-select>
+
+                  </div>
+                  <div class="col-md-4">
+                    <md-input-container><input formControlName="joinedDate"
+                                               mdInput [mdDatepicker]="joinedDate" placeholder="Joined Date">
+                      <button mdSuffix [mdDatepickerToggle]="joinedDate"></button>
+                    </md-input-container>
+                    <md-datepicker #joinedDate></md-datepicker>
+                  </div>
+                  <div class="col-md-4">
+                    <md-input-container><input formControlName="contractEndDate"
+                                               mdInput [mdDatepicker]="endDate"
+                                               placeholder="Contract End Date">
+                      <button mdSuffix [mdDatepickerToggle]="endDate"></button>
+                    </md-input-container>
+                    <md-datepicker #endDate></md-datepicker>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+
+                    <md-select placeholder="Unit" name="unit" formControlName="unit">
+                      <md-option *ngFor="let unit of unitList" [value]="unit.id">{{unit.name}}</md-option>
+
+                    </md-select>
+
+                  </div>
+                  <div class="col-md-4">
+
+                    <md-select placeholder="Grade" name="grade" formControlName="grade">
+
+                      <md-optGroup *ngFor="let grade of gradeList" label="grade.category.name">
+                        <md-option [value]="grade.id">{{grade.name}}</md-option>
+                      </md-optGroup>
+                    </md-select>
+
+                  </div>
+                  <div class="col-md-4">
+
+
+
+                  </div>
+                </div>
+                <div>
+                  <button type="submit" [disabled]="!empProfileForm.valid" (click)="saveEmpProfile(empProfileForm.value)" class="btn btn-primary pull-right">Update
+                    Profile
+                  </button>
+                  <div class="clearfix"></div>
+
+                </div>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">Access Control</h4>
+        </div>
+        <div class="card-content">
+
+            <div class="col-md-12">
+
+                <md-select placeholder="Role" formControlName="role" name="role">
+                  <md-option *ngFor="let role of retList" [value]="role.id" >{{role.roleName}}</md-option>
+                </md-select>
+
+            </div>
+
+
+            <div class="col-md-12">
+
+
+                <md-select multiple="true" placeholder="Unit Access" formControlName="unitAccess" name="unitAccess">
+                  <md-option  *ngFor="let unit of unitList" [value]="unit">{{unit.name}}</md-option>
+                </md-select>
+
+            </div>
+
+          <div class="row">
+            <div class="col-md-12">
+
+                <md-select multiple="true" placeholder="System Access" name="unitAccess" formControlName="systemAccess">
+                  <md-option  *ngFor="let access of systemAccessTypes" [value]="access" >{{access}}</md-option>
+                </md-select>
+
+            </div>
+          </div>
+          <div class="row" *ngIf="!isEdit">
+            <div class="col-md-12">
+              <md-input-container><input mdInput formControlName="username"
+                                         placeholder="User Name" required type="text"></md-input-container>
+              <small *ngIf="empProfileForm.controls.username.errors && (empProfileForm.controls.username.dirty || empProfileForm.controls.username.touched)">
+                <small [hidden]="!empProfileForm.controls.username.errors.required" class="text-danger">
+                  User Name is required
+                </small>
+
+                <small [hidden]="!empProfileForm.controls.username.errors.exist" class="text-danger">
+                  Duplicate User name
+                </small>
+              </small>
+            </div>
+          </div>
+          <div class="row" *ngIf="!isEdit">
+            <div class="col-md-12">
+              <md-input-container><input mdInput formControlName="password"
+                                         placeholder="Password" required type="password"></md-input-container>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">Skill Management</h4>
+        </div>
+        <div class="card-content">
+
+          <div class="row">
+            <div style="margin-left:10px; margin-bottom:10px">
+              <button md-button (click)="openSkillDialog()" style="margin-right: 10px"
+                      class="btn btn-info pull-right">Add Skills</button>
+            </div>
+            <div class="col-md-12" >
+              <tree-root [focused]="true" [nodes]="nodes" (moveNode)="moveNode($event)"
+                         [options]="treeoptions" (activate)="treeclickEvent($event)" (toggleExpanded)="treeExpanded($event)"> </tree-root>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card system-configuration">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">System Configuration</h4>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <div class="col-md-12">
+              <md-input-container><input mdInput required
+                                         type="text" focused>
+                <md-placeholder>Device
+                  Setting
+                </md-placeholder>
+              </md-input-container>
+            </div>
+            <div class="col-md-12">
+              <md-input-container><input mdInput required
+                                         type="text" focused>
+                <md-placeholder>Rejection
+                  Reasons
+                </md-placeholder>
+              </md-input-container>
+            </div>
+            <div class="col-md-12">
+              <md-input-container><input mdInput required
+                                         type="text" focused>
+                <md-placeholder>Allowed
+                  Status Type
+                </md-placeholder>
+              </md-input-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>

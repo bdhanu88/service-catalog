@@ -1,0 +1,41 @@
+<div class="main-content category-grade">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">Category and Grade</h4>
+				</div>
+				<div class="card-content">
+					<tree-root #tree [focused]="true" [nodes]="nodes"
+						[options]="options" (moveNode)="moveNode($event)"
+						(activate)="treeclickEvent($event)"> </tree-root>
+				</div>
+				<div class="card-footer" *ngIf="customValid.isPermissionAvailable('CATEGORY_EDIT')">
+
+					<button *ngIf="selectedId == '0'" (click)="addCategory()"
+						class="btn btn-primary pull-right">Add Category</button>
+
+					<button *ngIf="selectedId > '0' && isCategorySelected"
+						(click)="addGrade()" class="btn btn-primary pull-right">Add
+						Grade</button>
+
+					<button *ngIf="selectedId > '0' && isCategorySelected"
+						(click)="editCategory()" class="btn btn-primary pull-right">Edit
+						Category</button>
+
+					<button *ngIf="selectedId > '0' && isCategorySelected"
+						(click)="removeCategory()" class="btn btn-primary pull-right">Remove
+						Category</button>
+
+					<button *ngIf="selectedId > '0' && !isCategorySelected"
+						(click)="editGrade()" class="btn btn-primary pull-right">Edit Grade</button>
+
+					<button *ngIf="selectedId > '0' && !isCategorySelected"
+						(click)="removeGrade()" class="btn btn-primary pull-right">Remove
+						Grade</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

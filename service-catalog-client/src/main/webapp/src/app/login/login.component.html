@@ -1,0 +1,92 @@
+
+<div class="">
+
+	<div class="col-md-10 col-md-offset-1 col-sm-9 col-sm-offset-2" style = 'margin-left: 0% ; margin-top: 20px'>
+
+		<div class="card card-signup">
+
+			<div class="col-md-6">
+
+				<div class='row' style="margin-top: 5em;"></div>
+
+				<div class='row' style="margin-left: 3em;">
+					<h3>
+						<img src="assets/img/productivity.png" [style.width.px]='happyImageWidth'
+							[style.margin-top.px]='happyImageMargin'> <strong>{{'productivity'
+							| translate}}</strong>
+					</h3>
+					<p>{{'proctivityParagraph' | translate}}</p>
+				</div>
+
+				<div class='row' style="margin-left: 3em;">
+					<h3>
+						<img src="assets/img/gears.gif" [style.width.px]='happyImageWidth'
+							[style.margin-top.px]='happyImageMargin'> <strong>
+							{{'realTimeOptimization' | translate}}</strong>
+					</h3>
+					<p>{{'realTimeOptimizationParagraph' | translate}}</p>
+
+				</div>
+
+				<div class='row' style="margin-left: 3em;">
+					<h3>
+						<img src="assets/img/tim_80x80.png" [style.width.px]='happyImageWidth'
+							[style.margin-top.px]='happyImageMargin'> <strong>{{'happyEmployees'
+							| translate}}</strong>
+					</h3>
+					<p>{{'happyEmployeesPragraph' | translate}}</p>
+				</div>
+				
+				<div class='row' style="margin-bottom: 3em;">				
+
+				</div>
+
+			</div>
+			<div class="col-md-1"></div>
+
+			<div class="col-md-5">
+
+
+				<img src="assets/img/caresytem-logo-large.png" [style.width.px]='loginImageWidth'
+					[style.margin-top.px]='loginImageMarginTop'>
+
+
+				<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm"
+					novalidate>
+					<div class="input-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+						<!--<label for="username">Username</label>-->
+						<span class="input-group-addon">
+											<i class="material-icons">face</i>
+										</span>
+						<div class="form-group is-empty">
+							<input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required placeholder="User Name"
+							/> <span class="material-input"></span> <span *ngIf="f.submitted && !username.valid" class="help-block">Username
+							is required</span></div>
+					</div>
+					<div class="input-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+						<!--<label for="password">Password&nbsp;</label> -->
+						<span class="input-group-addon">
+											<i class="material-icons">lock_outline</i>
+										</span>
+						<div class="form-group is-empty">
+							<input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required placeholder="Password"
+							/> <span class="material-input"></span><span *ngIf="f.submitted && !password.valid" class="help-block">Password
+							is required</span></div>
+					</div>
+					<div class="form-group">
+						<button [disabled]="loading" class="btn btn-primary">Login</button>
+						<img *ngIf="loading"
+							src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+							style="width: 20px" />
+					</div>
+					<div *ngIf="error" class="alert alert-error">{{error}}</div>
+				</form>
+			</div>
+
+		</div>
+		<p align="center">2017 CareSystems Inc. All Right Reserved</p>
+		
+		
+	</div>
+
+</div>

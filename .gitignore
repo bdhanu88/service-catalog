@@ -1,0 +1,9 @@
+/service-catalog-api/.settings
+/service-catalog-api/.project
+/service-catalog-api/.classpath
+/service-catalog-api/target
+/service-catalog-client/.settings
+/service-catalog-client/.project
+/service-catalog-client/target
+/service-catalog-client/.classpath
+/service-catalog-client/src/main/webapp/node

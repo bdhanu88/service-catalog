@@ -1,0 +1,41 @@
+<div class="main-content skill-page">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">Skill</h4>
+				</div>
+				<div class="card-content">
+					<tree-root [focused]="true" [nodes]="nodes"
+						[options]="options" (moveNode)="moveNode($event)"
+						(activate)="treeclickEvent($event)"> </tree-root>
+				</div>
+				<div class="card-footer">
+
+					<button *ngIf="!isSkillGroupSelected && !isSkillSelected" (click)="addEntity(true)"
+						class="btn btn-primary pull-right">Add Skill Group</button>
+
+					<button *ngIf="isSkillGroupSelected && customValidation.isPermissionAvailable('SKILL_EDIT')"
+						(click)="addEntity(false)" class="btn btn-primary pull-right">Add
+						Skill</button>
+
+					<button *ngIf="isSkillGroupSelected"
+						(click)="editEntity(true)" class="btn btn-primary pull-right">Edit
+						Skill Group</button>
+
+					<button *ngIf="isSkillGroupSelected"
+						(click)="removeEntity(true)" class="btn btn-primary pull-right">Remove
+						Skill Group</button>
+
+					<button *ngIf="isSkillSelected && customValidation.isPermissionAvailable('SKILL_EDIT')"
+						(click)="editEntity(false)" class="btn btn-primary pull-right">Edit Skill</button>
+
+					<button *ngIf="isSkillSelected && customValidation.isPermissionAvailable('SKILL_EDIT')"
+						(click)="removeEntity(false)" class="btn btn-primary pull-right">Remove
+						Skill</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

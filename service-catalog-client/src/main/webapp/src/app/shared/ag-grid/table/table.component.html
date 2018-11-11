@@ -1,0 +1,11 @@
+<div class="ag-grid-table">
+	
+	<ag-grid-header *ngIf="agHeader" ></ag-grid-header>
+
+	<ag-grid-angular [gridOptions]="gridOptions" rowHeight="46"
+		class="ag-material ag-grid-table-view"> </ag-grid-angular>
+		
+ 	<ag-grid-pagination *ngIf="agPagination"></ag-grid-pagination>
+
+</div>
+

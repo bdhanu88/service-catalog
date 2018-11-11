@@ -1,0 +1,251 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="main-content employee-profile">
+  <form [formGroup]="addJobForm">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header" data-background-color="purple">
+            <h4 class="title">Create New Job</h4>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-8" style="border-right: solid;border-right-color: #80808038">
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-4">
+                      <input type="hidden" formControlName="id" name="id">
+
+                        <md-select placeholder="Job Category" formControlName="category" name="category" mdInput>
+                          <md-option *ngFor="let empType of empTypeList" [value]="empType.id">{{empType.name}}</md-option>
+
+                        </md-select>
+
+                    </div>
+                    <div class="col-md-4">
+                      <md-select placeholder="Job Type" formControlName="jobType" name="jobType" mdInput>
+                        <md-option *ngFor="let jobType of jobTypeList" [value]="jobType.id">{{jobType.name}}</md-option>
+
+                      </md-select>
+                    </div>
+                    <div class="col-md-4">
+
+                      <md-input-container><input formControlName="numOfStaff" mdInput
+                                                 required type="number" value="1" focused>
+                        <md-placeholder>Number of staff</md-placeholder>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-4">
+
+                      <md-input-container><input formControlName="currLocation" mdInput
+                                                 required type="text" focused>
+                        <md-placeholder>Current location/building</md-placeholder>
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+                      <md-input-container><input mdInput formControlName="currFloor"
+                                                 required type="text" focused>
+                        <md-placeholder>Floor number</md-placeholder>
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+
+                      <md-input-container><input formControlName="currArea" mdInput
+                                                 required type="text" focused>
+                        <md-placeholder>Area</md-placeholder>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-4">
+
+                      <md-input-container><input mdInput formControlName="destLocation"
+                                                 required type="text" focused>
+                        <md-placeholder>Destination location/building</md-placeholder>
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+
+                      <md-input-container><input mdInput formControlName="destFloor"
+                                                 required type="text" focused>
+                        <md-placeholder>Floor number</md-placeholder>
+                      </md-input-container>
+                    </div>
+                    <div class="col-md-4">
+
+                      <md-input-container><input mdInput name="destArea" formControlName="destArea"
+                                                 required type="text" focused>
+                        <md-placeholder>Area*</md-placeholder>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-7 formatted-form" style="margin-left: 0px">
+
+                      <md-radio-group>
+                        <div class="col-md-4">
+                          Required Time
+                        </div>
+                        <div class="col-md-3">
+                          <input type="radio" formControlName="isPreSchedule" value="now"> Now
+                        </div>
+                        <div class="col-md-4" style="padding: 1px">
+                          <input type="radio" formControlName="isPreSchedule" value="pre"> Pre Schedule
+                        </div>
+                      </md-radio-group>
+                    </div>
+                    <div class="col-md-4"><md-placeholder>Set Required Date and Time</md-placeholder>
+                      <angular2-date-picker formControlName="date" [settings]="settings" ></angular2-date-picker>
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-3 ">
+                      Equipments Needed
+
+                    </div>
+                    <div class="col-md-9">
+
+                      <div class="col-md-4 equipment" style="width: auto;min-width: 17vh">
+                        <md-checkbox formControlName="isPreSchedule" class="md-primary" value="one"> Bed</md-checkbox>
+                      </div>
+                      <div class="col-md-3 equipment" style="width: auto;">
+                        <md-checkbox formControlName="isPreSchedule" value="three"> Trolley Luggage</md-checkbox>
+                      </div>
+                      <div class="col-md-4 equipment" style="width: auto">
+                        <md-checkbox formControlName="isPreSchedule" class="md-primary" value="one">  Wheel chair (BIG)</md-checkbox>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-3">
+
+
+                    </div>
+                    <div class="col-md-9">
+
+                      <div class="col-md-4 equipment" style="width: auto">
+                        <md-checkbox formControlName="isPreSchedule" value="two"> Stretcher</md-checkbox>
+
+                      </div>
+                      <div class="col-md-3 equipment" style="width: auto">
+                        <md-checkbox formControlName="isPreSchedule" value="two"> Oxygen Tank</md-checkbox>
+                      </div>
+                      <div class="col-md-4 equipment" style="width: auto">
+                        <md-checkbox formControlName="isPreSchedule" class="md-primary" value="one">  Wheel chair (SMALL)</md-checkbox>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-3">
+
+
+                    </div>
+                    <div class="col-md-9">
+
+                      <div class="col-md-4 equipment" style="width: auto">
+                        <md-checkbox formControlName="isPreSchedule" value="three"> Stretcher for ambulance</md-checkbox>
+
+                      </div>
+                      <div class="col-md-3" style="width: auto">
+                        <!--<md-checkbox formControlName="isPreSchedule" value="two"> Oxygen Tank</md-checkbox>-->
+                      </div>
+                      <div class="col-md-4" style="width: auto">
+                        <!--<md-checkbox formControlName="isPreSchedule" value="three"> Trolley Luggage</md-checkbox>-->
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <md-input-container><input formControlName="remark" mdInput
+                                               required type="text" focused>
+                      <md-placeholder>Special Remarks</md-placeholder>
+                    </md-input-container>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="col-md-12">
+
+                    <div class="col-md-3">
+                      <md-select name="destArea" class="title" [value]="1" formControlName="destArea">
+                        <md-option [value]="1" >Mr</md-option>
+                        <md-option [value]="2">Mrs</md-option>
+                        <md-option [value]="3">Ms</md-option>
+                        <md-option [value]="4">Ven</md-option>
+                      </md-select>
+                    </div>
+                    <div class="col-md-9">
+                      <md-input-container><input formControlName="patientName" mdInput
+                                                 required type="text" focused>
+                        <md-placeholder>Patient Name</md-placeholder>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <md-input-container><input formControlName="patientId" mdInput
+                                               required type="text" focused>
+                      <md-placeholder>Patient Id</md-placeholder>
+                    </md-input-container>
+                  </div>
+                  <div>
+                    <div class="col-md-7 formatted-form" style="margin-left: 0px">
+
+                      <md-radio-group placeholder="Gender">
+
+                        <div class="col-md-6">
+                          <input type="radio" formControlName="gender" value="MALE"> Male
+                        </div>
+                        <div class="col-md-6" style="padding: 1px">
+                          <input type="radio" formControlName="gender" value="FEMALE"> Female
+                        </div>
+                      </md-radio-group>
+
+                    </div>
+                    <div class="col-md-3">
+                      <md-input-container><input formControlName="age" mdInput
+                                                 required type="number" focused>
+                        <md-placeholder>Age</md-placeholder>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <md-input-container><input formControlName="requestorName" mdInput
+                                               required type="text" focused>
+                      <md-placeholder>Requestor's name</md-placeholder>
+                    </md-input-container>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <md-input-container><input formControlName="requestorContact" mdInput
+                                               required type="text" focused>
+                      <md-placeholder>Requestor's Contact No</md-placeholder>
+                    </md-input-container>
+                  </div>
+                  <div class="col-md-12 formatted-form">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                      <button type="submit"  class="btn btn-primary pull-right">
+                        Create New Job
+                      </button>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<style>
+
+</style>

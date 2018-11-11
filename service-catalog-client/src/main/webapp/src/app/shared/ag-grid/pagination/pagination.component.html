@@ -1,0 +1,28 @@
+<div>
+	<div class="container">
+		<div class="row" *ngIf="pager.pages && pager.pages.length" >
+			<div class="col-sm-5 pagination-info">
+				Showing {{ pager.startIndex +1 }} to {{pager.endIndex + 1}} of {{pager.totalItems}} entries
+			</div>
+			<div class="col-sm-7 ag-grid-paginate">
+			<!-- pager -->
+		<ul class="ag-grid pagination">
+			<li [ngClass]="{disabled:pager.currentPage === 1}" class="paginate-button"><a
+				(click)="setPage(1)">First</a></li>
+			<li [ngClass]="{disabled:pager.currentPage === 1}" class="paginate-button"><a
+				(click)="setPage(pager.currentPage - 1)">Previous</a></li>
+			<li *ngFor="let page of pager.pages"
+				[ngClass]="{active:pager.currentPage === page}"><a
+				(click)="setPage(page)">{{page}}</a></li>
+			<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="paginate-button">
+				<a (click)="setPage(pager.currentPage + 1)">Next</a>
+			</li>
+			<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="paginate-button">
+				<a (click)="setPage(pager.totalPages)">Last</a>
+			</li>
+		</ul>
+			</div>
+		</div>
+		
+	</div>
+</div>

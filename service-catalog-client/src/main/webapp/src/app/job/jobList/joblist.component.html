@@ -1,0 +1,63 @@
+<div class="main-content">
+
+	<div class="row">
+    <div *ngIf="isSummaryAvailable=='true'">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-content" style="height: auto">
+            <div class="col-md-4 summary-right-border summary-main-block" style="margin-bottom: 1vh;">
+              <div class="col-md-12 " style="margin-left: -3vw; ">
+                <div class="col-md-9 summary-main-text">
+                  <span >Total Jobs</span><br>
+                  <span style="font-size: 24px">FOR TODAY</span>
+                </div>
+                <div class="col-md-3 summary-main-count" style="margin-top: 1.5vh;">
+                  <span>521</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="col-md-2 summary-right-border" >
+                <span class="summary-detail-text-block">In Progress</span><br>
+                <span class="summary-count-block">12</span>
+              </div>
+              <div class="col-md-2 summary-right-border" >
+                <span class="summary-detail-text-block">Pending</span><br>
+                <span class="summary-count-block">03</span>
+              </div>
+              <div class="col-md-3 summary-right-border" >
+                <span class="summary-detail-text-block">Pre Scheduled</span><br>
+                <span class="summary-count-block">06</span>
+              </div>
+              <div class="col-md-2 summary-right-border" >
+                <span class="summary-detail-text-block">Completed</span><br>
+                <span class="summary-count-block">498</span>
+              </div>
+              <div class="col-md-3 " >
+                <span class="summary-detail-text-block">Cancelled</span><br>
+                <span class="summary-count-block">02</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">Current Job List</h4>
+				</div>
+				<div class="card-content">
+          <div *ngIf="customValidation.isPermissionAvailable('JOB_LIST_EDIT')" style="margin-left:10px; margin-bottom:10px">
+            <a class="md-button"  href="#/addjob" style="margin-right: 10px"
+               class="btn btn-info pull-right">Add Job</a>
+          </div>
+					<ag-grid-table-cmp #jobListTable ></ag-grid-table-cmp>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>

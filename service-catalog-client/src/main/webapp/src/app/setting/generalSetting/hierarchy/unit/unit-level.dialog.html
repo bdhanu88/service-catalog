@@ -1,0 +1,50 @@
+<div class="main-content">
+    <div class="myDialog">
+        <h2 md-dialog-title>{{title}}</h2>
+        <div md-dialog-content>
+            <div>
+                <form [formGroup]="unitLevelForm"   novalidate>
+                    <!-- we will place our fields here -->
+                    <div  class="form-group">
+                        <input  type="hidden" formControlName="id" name="id" class="form-control" >
+                    <!--  <input  type="hidden" formControlName="companyId" name="companyId" class="form-control" > -->
+                        <label>Name</label>
+                        <!--bind name to ngModel, it's required with minimum 5 characters-->
+                        <input  type="text" formControlName="name" name="name" class="form-control" >
+                        <!--show error only when field is not valid & it's dirty or form submited-->
+
+                        <small *ngIf="unitLevelForm.controls.name.errors && (unitLevelForm.controls.name.dirty || unitLevelForm.controls.name.touched)">
+                             <small [hidden]="!unitLevelForm.controls.name.errors.required" class="text-danger">
+                                 Name is required
+                             </small>
+
+                              <small [hidden]="!unitLevelForm.controls.name.errors.exist" class="text-danger">
+                                  duplicate unitLevel name
+                             </small>
+                        </small>
+                    </div>
+                    <!--adrress group-->
+                    <div class="form-group">
+                        <!--street-->
+                        <div>
+                            <label>Abbreviation</label>
+                            <input type="text" formControlName="abbreviation" name="abbreviation" class="form-control" >
+                             <small *ngIf="unitLevelForm.controls.abbreviation.errors">
+                                    <small [hidden]="!unitLevelForm.controls.abbreviation.errors.exist" class="text-danger">
+                                       duplicate abbreviation
+                                    </small>
+                             </small>
+                        </div>
+                    </div>
+
+                    <button md-button [disabled]="!unitLevelForm.valid" type="submit" (click)="dialogRef.close(unitLevelForm.value)">{{actionButton}}</button>
+                    <button md-button type="button" (click)="dialogRef.close(null)">Cancel</button>
+                </form>
+            </div>
+
+        </div>
+        <div md-dialog-actions>
+
+        </div>
+    </div>
+<div class="main-content">

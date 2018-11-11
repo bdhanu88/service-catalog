@@ -1,0 +1,24 @@
+<div class="main-content">
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel" role="alert">
+                Selected Items: {{values}}
+            </div>
+
+
+
+        </div>
+        <div class="col-sm-5">
+
+            <label for="book-category" class="col-3 col-form-label">Tree Items</label>
+            <div class="col-9">
+                <div class="d-inline-block">
+                    <ngx-treeview [config]="config" [items]="items" (selectedChange)="values = $event">
+                    </ngx-treeview>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

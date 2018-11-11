@@ -1,0 +1,42 @@
+<div class="main-content notification">
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col-sm-11">
+							<ul class="nav nav-pills nav-pills-rose">
+								<li class="active"><a (click)="refreshTable('notificationTable')" href="#notification"
+									data-toggle="tab" aria-expanded="true">Notifications</a></li>
+								<li class=""><a (click)="refreshTable('incomingMessageTable')" href="#messages" data-toggle="tab"
+									aria-expanded="false">Messages</a></li>
+								<li class=""><a (click)="refreshTable('sentMessageTable')" href="#sentItems" data-toggle="tab"
+									aria-expanded="false">Sent Items</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-1">
+							<button md-mini-fab mdTooltip="Send Massage" class="md-primary"><i class="material-icons">add</i></button>
+						</div>
+					</div>
+
+					<div class="tab-content tab-space notification-table">
+						<div class="tab-pane active" id="notification">
+							<ag-grid-table-cmp #notificationTable [agPaginationAuto]="true" [agHeader]="false" [agPagination]="true" ></ag-grid-table-cmp>
+						</div>
+						<div class="tab-pane" id="messages">
+							<ag-grid-table-cmp #incomingMessageTable  [agPaginationAuto]="true" [agHeader]="false" [agPagination]="true" ></ag-grid-table-cmp>
+						</div>
+						<div class="tab-pane" id="sentItems">
+							<ag-grid-table-cmp #sentMessageTable  [agPaginationAuto]="true" [agHeader]="false" [agPagination]="true" ></ag-grid-table-cmp>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+</div>

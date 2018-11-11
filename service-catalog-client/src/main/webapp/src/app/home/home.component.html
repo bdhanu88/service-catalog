@@ -1,0 +1,534 @@
+<div class="main-content dashboard">
+
+	<div class="row">
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-stats">
+				<div class="card-header" data-background-color="red">
+					<i class="material-icons">info_outline</i>
+				</div>
+				<div class="card-content">
+					<p class="category">Pending Jobs</p>
+					<h3 class="title">4</h3>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<i class="material-icons text-danger">warning</i> <a
+							href="#dashbored">Assign Manually</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-stats">
+				<div class="card-header" data-background-color="orange">
+					<i class="material-icons">person_pin</i>
+				</div>
+				<div class="card-content">
+					<p class="category">Staff Available</p>
+					<h3 class="title">3</h3>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<i class="material-icons">update</i> Updated 4 minutes ago
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-stats">
+				<div class="card-header" data-background-color="green">
+					<i class="material-icons">store</i>
+				</div>
+				<div class="card-content">
+					<p class="category">Completed Jobs</p>
+					<h3 class="title">521</h3>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<i class="material-icons">date_range</i> Last 24 Hours
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-stats">
+				<div class="card-header" data-background-color="green">
+					<i class="material-icons">schedule</i>
+				</div>
+				<div class="card-content">
+					<p class="category">Average Handle Time</p>
+					<h3 class="title">11m 25s</h3>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<i class="material-icons">date_range</i> Last 24 Hours
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ 	<joblist-cmp [agPaginationAuto]="true" ></joblist-cmp>
+
+	<employees-cmp [agPaginationAuto]="true" ></employees-cmp>
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header card-chart" data-background-color="red">
+					<div class="ct-chart" id="dailySalesChart">
+            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="100%" class="ct-chart-line"
+                 style="width: 100%; height: 100%;">
+              <g class="ct-grids">
+                <line y1="119.60000610351562" y2="119.60000610351562" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="95.6800048828125" y2="95.6800048828125" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="71.76000366210937" y2="71.76000366210937" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="47.840002441406256" y2="47.840002441406256" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="23.920001220703128" y2="23.920001220703128" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="0" y2="0" x1="40" x2="355.32501220703125" class="ct-grid ct-vertical"></line>
+              </g>
+              <g>
+                <g class="ct-series ct-series-a">
+                  <path
+                    d="M 40 90.896 C 47.508 88.903 70.031 76.943 85.046 78.936 C 100.062 80.929 115.077 102.856 130.093 102.856 C 145.108 102.856 160.124 85.315 175.139 78.936 C 190.155 72.557 205.17 64.983 220.186 64.584 C 235.201 64.185 250.217 82.524 265.232 76.544 C 280.248 70.564 302.771 36.677 310.279 28.704"
+                    class="ct-line"></path>
+                </g>
+              </g>
+              <g class="ct-labels">
+                <foreignObject style="overflow: visible;" x="40" y="124.60000610351562" width="45.04643031529018"
+                               height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 45px; height: 20px;">M
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="85.04643031529018" y="124.60000610351562"
+                               width="45.04643031529018" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 45px; height: 20px;">T
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="130.09286063058036" y="124.60000610351562"
+                               width="45.046430315290166" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 45px; height: 20px;">W
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="175.13929094587053" y="124.60000610351562"
+                               width="45.046430315290195" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 45px; height: 20px;">T
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="220.18572126116072" y="124.60000610351562"
+                               width="45.046430315290195" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 45px; height: 20px;">F
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="265.2321515764509" y="124.60000610351562"
+                               width="45.04643031529014" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 45px; height: 20px;">S
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="310.27858189174106" y="124.60000610351562"
+                               width="45.046430315290195" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 45px; height: 20px;">S
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="95.6800048828125" x="0" height="23.920001220703124"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">0
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="71.76000366210937" x="0" height="23.920001220703124"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">10
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="47.84000244140625" x="0" height="23.92000122070312"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">20
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="23.920001220703128" x="0" height="23.920001220703128"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">30
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="0" x="0" height="23.920001220703128" width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">40
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="-30" x="0" height="30" width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 30px; width: 30px;">50
+                  </text>
+                </foreignObject>
+              </g>
+            </svg>
+          </div>
+				</div>
+				<div class="card-content">
+					<h4 class="title">Job Type Analysis</h4>
+					<p class="category">Last 4 weeks trending</p>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<i class="material-icons">access_time</i> updated 4 minutes ago
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header card-chart" data-background-color="green">
+					<div class="ct-chart" id="emailsSubscriptionChart">
+            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="100%" class="ct-chart-line"
+                 style="width: 100%; height: 100%;">
+              <g class="ct-grids">
+                <line x1="40" x2="40" y1="0" y2="119.60000610351562" class="ct-grid ct-horizontal"></line>
+                <line x1="75.03611246744791" x2="75.03611246744791" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line x1="110.07222493489583" x2="110.07222493489583" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line x1="145.10833740234375" x2="145.10833740234375" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line x1="180.14444986979166" x2="180.14444986979166" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line x1="215.18056233723956" x2="215.18056233723956" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line x1="250.2166748046875" x2="250.2166748046875" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line x1="285.2527872721354" x2="285.2527872721354" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line x1="320.2888997395833" x2="320.2888997395833" y1="0" y2="119.60000610351562"
+                      class="ct-grid ct-horizontal"></line>
+                <line y1="119.60000610351562" y2="119.60000610351562" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="95.6800048828125" y2="95.6800048828125" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="71.76000366210937" y2="71.76000366210937" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="47.840002441406256" y2="47.840002441406256" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="23.920001220703128" y2="23.920001220703128" x1="40" x2="355.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="0" y2="0" x1="40" x2="355.32501220703125" class="ct-grid ct-vertical"></line>
+              </g>
+              <g>
+                <g class="ct-series ct-series-a">
+                  <path
+                    d="M 40 95.68 C 75.036 81.328 75.036 81.328 75.036 81.328 C 110.072 100.464 110.072 100.464 110.072 100.464 C 145.108 88.504 145.108 88.504 145.108 88.504 C 180.144 71.76 180.144 71.76 180.144 71.76 C 215.181 83.72 215.181 83.72 215.181 83.72 C 250.217 71.76 250.217 71.76 250.217 71.76 C 285.253 38.272 285.253 38.272 285.253 38.272 C 320.289 47.84 320.289 47.84 320.289 47.84"
+                    class="ct-line ct-white"></path>
+                  <line x1="40" y1="95.6800048828125" x2="40.01" y2="95.6800048828125" class="ct-point ct-white"
+                        ct:value="10" opacity="1"></line>
+                  <line x1="75.03611246744791" y1="81.32800415039063" x2="75.04611246744791" y2="81.32800415039063"
+                        class="ct-point ct-white" ct:value="16" opacity="1"></line>
+                  <line x1="110.07222493489583" y1="100.46400512695313" x2="110.08222493489583"
+                        y2="100.46400512695313"
+                        class="ct-point ct-white" ct:value="8" opacity="1"></line>
+                  <line x1="145.10833740234375" y1="88.50400451660155" x2="145.11833740234374" y2="88.50400451660155"
+                        class="ct-point ct-white" ct:value="13" opacity="1"></line>
+                  <line x1="180.14444986979166" y1="71.76000366210937" x2="180.15444986979165" y2="71.76000366210937"
+                        class="ct-point ct-white" ct:value="20" opacity="1"></line>
+                  <line x1="215.18056233723956" y1="83.72000427246094" x2="215.19056233723956" y2="83.72000427246094"
+                        class="ct-point ct-white" ct:value="15" opacity="1"></line>
+                  <line x1="250.2166748046875" y1="71.76000366210937" x2="250.2266748046875" y2="71.76000366210937"
+                        class="ct-point ct-white" ct:value="20" opacity="1"></line>
+                  <line x1="285.2527872721354" y1="38.272001953125" x2="285.26278727213537" y2="38.272001953125"
+                        class="ct-point ct-white" ct:value="34" opacity="1"></line>
+                  <line x1="320.2888997395833" y1="47.840002441406256" x2="320.2988997395833" y2="47.840002441406256"
+                        class="ct-point ct-white" ct:value="30" opacity="1"></line>
+                </g>
+              </g>
+              <g class="ct-labels">
+                <foreignObject style="overflow: visible;" x="40" y="124.60000610351562" width="35.036112467447914"
+                               height="20">
+                  <text fill="white" class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'07
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="75.03611246744791" y="124.60000610351562"
+                               width="35.036112467447914" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'08
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="110.07222493489583" y="124.60000610351562"
+                               width="35.03611246744792" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'09
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="145.10833740234375" y="124.60000610351562"
+                               width="35.03611246744791" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'10
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="180.14444986979166" y="124.60000610351562"
+                               width="35.03611246744791" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'11
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="215.18056233723956" y="124.60000610351562"
+                               width="35.036112467447936" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'12
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="250.2166748046875" y="124.60000610351562"
+                               width="35.03611246744791" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'13
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="285.2527872721354" y="124.60000610351562"
+                               width="35.03611246744791" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'14
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="320.2888997395833" y="124.60000610351562"
+                               width="35.036112467447936" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 35px; height: 20px;">'15
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="95.6800048828125" x="0" height="23.920001220703124"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">0
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="71.76000366210937" x="0" height="23.920001220703124"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">10
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="47.84000244140625" x="0" height="23.92000122070312"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">20
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="23.920001220703128" x="0" height="23.920001220703128"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">30
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="0" x="0" height="23.920001220703128" width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 24px; width: 30px;">40
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="-30" x="0" height="30" width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 30px; width: 30px;">50
+                  </text>
+                </foreignObject>
+              </g>
+            </svg>
+          </div>
+				</div>
+				<div class="card-content">
+					<h4 class="title">Weekly Trend</h4>
+
+					<p class="category">
+						<span class="text-success"><i class="fa fa-long-arrow-up"></i>
+							55% </span> increase against last week.
+					</p>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<i class="material-icons">access_time</i> updated 4 minutes ago
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header card-chart" data-background-color="blue">
+					<div class="ct-chart" id="completedTasksChart">
+            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="100%" class="ct-chart-bar"
+                 style="width: 100%; height: 100%;">
+              <g class="ct-grids">
+                <line y1="114.60000610351562" y2="114.60000610351562" x1="50" x2="340.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="92.46667141384549" y2="92.46667141384549" x1="50" x2="340.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="70.33333672417535" y2="70.33333672417535" x1="50" x2="340.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="48.200002034505204" y2="48.200002034505204" x1="50" x2="340.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+                <line y1="26.066667344835068" y2="26.066667344835068" x1="50" x2="340.32501220703125"
+                      class="ct-grid ct-vertical"></line>
+              </g>
+              <g>
+                <g class="ct-series ct-series-a">
+                  <line x1="62.096875508626304" x2="62.096875508626304" y1="114.60000610351562" y2="54.61866909450955"
+                        class="ct-bar" ct:value="542" opacity="1"></line>
+                  <line x1="86.2906265258789" x2="86.2906265258789" y1="114.60000610351562" y2="65.57466976589626"
+                        class="ct-bar" ct:value="443" opacity="1"></line>
+                  <line x1="110.48437754313152" x2="110.48437754313152" y1="114.60000610351562" y2="79.1866706000434"
+                        class="ct-bar" ct:value="320" opacity="1"></line>
+                  <line x1="134.67812856038412" x2="134.67812856038412" y1="114.60000610351562" y2="28.28000081380209"
+                        class="ct-bar" ct:value="780" opacity="1"></line>
+                  <line x1="158.87187957763675" x2="158.87187957763675" y1="114.60000610351562" y2="53.40133568657769"
+                        class="ct-bar" ct:value="553" opacity="1"></line>
+                  <line x1="183.06563059488934" x2="183.06563059488934" y1="114.60000610351562" y2="64.46800303141276"
+                        class="ct-bar" ct:value="453" opacity="1"></line>
+                  <line x1="207.25938161214194" x2="207.25938161214194" y1="114.60000610351562" y2="78.5226705593533"
+                        class="ct-bar" ct:value="326" opacity="1"></line>
+                  <line x1="231.45313262939456" x2="231.45313262939456" y1="114.60000610351562" y2="66.57066982693142"
+                        class="ct-bar" ct:value="434" opacity="1"></line>
+                  <line x1="255.64688364664715" x2="255.64688364664715" y1="114.60000610351562" y2="51.74133558485243"
+                        class="ct-bar" ct:value="568" opacity="1"></line>
+                  <line x1="279.8406346638997" x2="279.8406346638997" y1="114.60000610351562" y2="47.09333530002171"
+                        class="ct-bar" ct:value="610" opacity="1"></line>
+                  <line x1="304.03438568115234" x2="304.03438568115234" y1="114.60000610351562"
+                        y2="30.936000976562497"
+                        class="ct-bar" ct:value="756" opacity="1"></line>
+                  <line x1="328.22813669840497" x2="328.22813669840497" y1="114.60000610351562"
+                        y2="15.553333367241748"
+                        class="ct-bar" ct:value="895" opacity="1"></line>
+                </g>
+              </g>
+              <g class="ct-labels">
+                <foreignObject style="overflow: visible;" x="50" y="119.60000610351562" width="24.193751017252605"
+                               height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Jan
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="74.19375101725261" y="119.60000610351562"
+                               width="24.193751017252605" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Feb
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="98.38750203450522" y="119.60000610351562"
+                               width="24.193751017252602" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Mar
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="122.58125305175781" y="119.60000610351562"
+                               width="24.19375101725261" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Apr
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="146.77500406901044" y="119.60000610351562"
+                               width="24.19375101725261" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Mai
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="170.96875508626303" y="119.60000610351562"
+                               width="24.193751017252595" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Jun
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="195.16250610351562" y="119.60000610351562"
+                               width="24.193751017252623" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Jul
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="219.35625712076825" y="119.60000610351562"
+                               width="24.193751017252595" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Aug
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="243.55000813802084" y="119.60000610351562"
+                               width="24.193751017252595" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Sep
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="267.74375915527344" y="119.60000610351562"
+                               width="24.193751017252623" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Oct
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="291.93751017252606" y="119.60000610351562"
+                               width="24.193751017252623" height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 24px; height: 20px;">Nov
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" x="316.1312611897787" y="119.60000610351562" width="30"
+                               height="20">
+                  <text class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="width: 30px; height: 20px;">Dec
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="92.46667141384549" x="10" height="22.13333468967014"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 22px; width: 30px;">0
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="70.33333672417535" x="10" height="22.13333468967014"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 22px; width: 30px;">200
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="48.20000203450521" x="10" height="22.133334689670143"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 22px; width: 30px;">400
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="26.066667344835068" x="10" height="22.133334689670136"
+                               width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 22px; width: 30px;">600
+                  </text>
+                </foreignObject>
+                <foreignObject style="overflow: visible;" y="-3.933332655164932" x="10" height="30" width="30">
+                  <text class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/"
+                        style="height: 30px; width: 30px;">800
+                  </text>
+                </foreignObject>
+              </g>
+            </svg>
+          </div>
+				</div>
+				<div class="card-content">
+					<h4 class="title">Hourly Volume</h4>
+					<p class="category">Last 24 Hours</p>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<i class="material-icons">access_time</i> updated 4 minutes ago
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
